@@ -1,0 +1,132 @@
+//classes used by multiple elements troughout the page
+
+//commonly used navigation styles
+//nav header style
+.navHeader {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.4px;
+}
+
+//commonly used header styles
+//headers used in product cards
+.prodTitleHeader {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+}
+
+.prodPriceHeader {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 83.333% */
+  letter-spacing: 0.2px;
+}
+
+.prodDiscountedPriceHeader {
+  padding-left: 10px;
+  color: #5f5f5f;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  letter-spacing: 0.2px;
+  text-decoration: line-through;
+}
+
+//other elements used in product cards
+.productDesc {
+  background-color: black;
+  width: 441px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//product stars and colors to choose from
+.starsColor {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.stars {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.colors {
+  padding-top: 10px;
+}
+
+.starsHeader {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 2px 5px 0;
+}
+
+//styles used in "New In" card
+.newIn {
+  width: 441px;
+  height: 585px;
+  background-size: contain;
+  display: flex;
+  align-items: end;
+}
+.newInHeader {
+  padding: 12px 24px;
+  margin-bottom: 50px;
+  background: #423496;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+//selected color svg
+.selectedColorSvg {
+  border-radius: 200px;
+  //   border: 1px solid white;
+  border: 1px solid #5f5f5f;
+}
+
+//button styles
+.casualButton {
+  padding: 50px 8% 50px 0;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    border-radius: 33px;
+    background: #1b1b1b;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    padding: 8px 48px;
+  }
+}

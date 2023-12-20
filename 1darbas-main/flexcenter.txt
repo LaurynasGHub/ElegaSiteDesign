@@ -1,0 +1,9 @@
+display: flex;
+align-items: center;
+
+flex-aCenter
+
+flex-aCenter-jSpace-between
+
+flex-fdirColumn-jFlex-start
+
