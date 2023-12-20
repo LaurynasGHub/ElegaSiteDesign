@@ -1,0 +1,763 @@
+* {
+  color: white;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexCollumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexSpaceAround {
+  display: flex;
+  justify-content: space-around;
+}
+
+.itemAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flex-dRow-aCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navHeader {
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.4px;
+}
+
+.prodTitleHeader {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.2px;
+}
+
+.prodPriceHeader {
+  color: #fff;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 83.333% */
+  letter-spacing: 0.2px;
+}
+
+.prodDiscountedPriceHeader {
+  padding-left: 10px;
+  color: #5f5f5f;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  letter-spacing: 0.2px;
+  text-decoration: line-through;
+}
+
+.productDesc {
+  background-color: black;
+  width: 441px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.starsColor {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.stars {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.colors {
+  padding-top: 10px;
+}
+
+.starsHeader {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 2px 5px 0;
+}
+
+.newIn {
+  width: 441px;
+  height: 585px;
+  background-size: contain;
+  display: flex;
+  align-items: end;
+}
+
+.newInHeader {
+  padding: 12px 24px;
+  margin-bottom: 50px;
+  background: #423496;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.selectedColorSvg {
+  border-radius: 200px;
+  border: 1px solid #5f5f5f;
+}
+
+.casualButton {
+  padding: 50px 8% 50px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.casualButton button {
+  border-radius: 33px;
+  background: #1b1b1b;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  padding: 8px 48px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: black;
+  padding: 20px 250px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+nav .sandwich {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media screen and (min-width: 1475px) {
+  nav div.sandwich {
+    display: none;
+  }
+}
+nav .shopCategories {
+  width: 650px;
+  display: flex;
+  align-items: center;
+}
+nav .shopCategories h2 {
+  margin: 10px;
+  color: #fff;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.5px;
+}
+nav .shopCategories svg {
+  margin-right: 2%;
+}
+@media screen and (max-width: 1475px) {
+  nav {
+    padding: 20px 30px;
+  }
+  nav div.shopCategories {
+    display: none;
+  }
+  nav svg.heart {
+    display: none;
+  }
+}
+nav .userNav {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .userNav .icons {
+  margin-right: 24px;
+}
+nav .userNav .icons .shoppingCart p {
+  color: #fff;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 10px */
+  letter-spacing: -0.25px;
+}
+nav .userNav .icons svg {
+  width: 30px;
+  height: 30px;
+  margin: 12px;
+}
+nav .userNav .userProf {
+  display: flex;
+  align-items: center;
+}
+nav .userNav .userProf img {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  border-radius: 100%;
+  border: 1px solid #cdcdcd;
+  margin-right: 12px;
+}
+nav .userNav .userProf .userDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1475px) {
+  nav .userNav .userProf div.userDetails {
+    display: none;
+  }
+}
+
+header {
+  background-color: black;
+  padding: 0 0 0 12%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  flex-wrap: wrap;
+}
+header .beExtraText {
+  width: 90%;
+  grid-column-start: 1;
+  grid-row: 3/6;
+}
+header .beExtraText h1 {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.9px;
+}
+header .beExtraText h2 {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.8px;
+}
+header .beExtraText p {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: -0.6px;
+  margin-right: 30px;
+}
+header .beExtraText .searchBar {
+  width: 100%;
+  padding: 8px 10px 8px 25px;
+  gap: 8px;
+  border-radius: 100px;
+  background: #161616;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .beExtraText .searchBar h1 {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+header .beExtraText .searchBar .searchBtn {
+  display: flex;
+  width: 140px;
+  height: 50px;
+  padding: 8px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 33px;
+  background: #fff;
+  box-shadow: 2px 2px 0px 0px rgba(69, 63, 63, 0.13) inset;
+}
+header .beExtraText .searchBar .searchBtn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+header .beExtraText .searchBar .searchBtn h3 {
+  color: #000;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+header .scroll {
+  grid-row: 6;
+  grid-column-start: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .scroll svg {
+  margin-right: 2%;
+}
+header .photoSlide {
+  grid-row: 1/6;
+  overflow: hidden;
+}
+header .photoSlide img {
+  width: 60%;
+  flex-shrink: 0;
+}
+header .photoControlls {
+  margin-right: 30%;
+  grid-row-start: 6;
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+header .photoControlls .elipses {
+  display: inline-flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+}
+header .photoControlls .arrows {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1250px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 5%;
+  }
+  header .beExtraText {
+    width: 90%;
+  }
+  header .scroll {
+    display: none;
+  }
+  header .photoSlide {
+    grid-row: 1;
+    display: flex;
+  }
+  header .photoControlls {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+  }
+  header .photoControlls .arrows {
+    display: none;
+  }
+}
+.collections {
+  background-color: black;
+  padding-right: 14%;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.collections .collectionCards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.collections .collectionCards .collectionCard {
+  margin-left: 5%;
+  width: 450px;
+  height: 570px;
+  overflow: hidden;
+}
+.collections .collectionCards .collectionCard img {
+  width: 450px;
+  height: 570px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 1475px) {
+  .collections div.autumn img {
+    background-position: -300px;
+    background-repeat: no-repeat;
+    background-size: auto 70%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .collections {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .arrows {
+    display: none;
+  }
+}
+.casualStyle {
+  background-color: black;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+.casualStyle .casualStyleDesc {
+  display: flex;
+  justify-content: space-around;
+}
+.casualStyle .casualStyleDesc .casualStyleTitle h1 {
+  color: #fff;
+  font-family: Ubuntu;
+  margin-bottom: 0;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+.casualStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+.casualStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle h2 {
+  margin-bottom: 0;
+  color: #5f5f5f;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+.casualStyle .styleDesc {
+  width: 60%;
+  flex-shrink: 0;
+}
+.casualStyle .productCards {
+  padding: 20px 5% 100px;
+}
+.casualStyle .productCards .productCardBoots .newIn {
+  background-image: url(./Assets/Photos/Boots.jpeg);
+}
+.casualStyle .productCards .productCardTrousers .newIn {
+  background-image: url(./Assets/Photos/Trousers.jpeg);
+}
+.casualStyle .productCards .productCardTshirts .newIn {
+  background-image: url(./Assets/Photos/Tshirts.jpeg);
+}
+
+@media screen and (max-width: 1250px) {
+  .casualStyle {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .casualStyle .casualStyleDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .casualStyle .casualStyleDesc .styleDesc {
+    width: 90%;
+    padding-top: 3%;
+  }
+  .casualStyle .casualButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.autumnOffers {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.autumnOffers .elipse1 {
+  position: absolute;
+  width: 406px;
+  height: 406px;
+  flex-shrink: 0;
+  border-radius: 406px;
+  background: rgba(201, 41, 118, 0.38);
+  filter: blur(74px);
+}
+.autumnOffers .elipse2 {
+  position: absolute;
+  width: 784.995px;
+  height: 447.249px;
+  transform: rotate(-1.101deg);
+  flex-shrink: 0;
+  border-radius: 784.995px;
+  background: linear-gradient(251deg, #a73b27 22.43%, rgba(98, 129, 41, 0.51) 59.21%, rgba(25, 202, 43, 0) 76.17%);
+  background-blend-mode: multiply;
+  filter: blur(100px);
+}
+.autumnOffers .elipse3 {
+  position: absolute;
+  width: 406px;
+  height: 406px;
+  flex-shrink: 0;
+  border-radius: 406px;
+  background: rgba(173, 124, 237, 0.5);
+  filter: blur(74px);
+}
+.autumnOffers .offerText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 100;
+}
+.autumnOffers .offerText h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 170px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180px;
+  text-transform: capitalize;
+}
+.autumnOffers .offerText h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+}
+.autumnOffers .saleImg {
+  z-index: 100;
+}
+.autumnOffers .saleImg img {
+  width: 761px;
+  height: 712px;
+  flex-shrink: 0;
+}
+
+.professionalStyle {
+  background-color: black;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.professionalStyle .casualStyleDesc {
+  display: flex;
+  justify-content: space-around;
+}
+.professionalStyle .casualStyleDesc .casualStyleTitle h1 {
+  color: #fff;
+  text-align: center;
+  font-family: Ubuntu;
+  margin-bottom: 0;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 100% */
+}
+.professionalStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+.professionalStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle h2 {
+  margin-bottom: 0;
+  color: var(--Gray-Medium, #5f5f5f);
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+}
+.professionalStyle .styleDesc {
+  width: 51%;
+  flex-shrink: 0;
+}
+.professionalStyle .productCards {
+  padding: 20px 5% 100px;
+}
+.professionalStyle .productCards .productCardBoots .newIn {
+  background-image: url(./Assets/Photos/BowTie.png);
+}
+.professionalStyle .productCards .productCardTrousers .newIn {
+  background-image: url(./Assets/Photos/FullStyle.png);
+}
+.professionalStyle .productCards .productCardTshirts .newIn {
+  background-image: url(./Assets/Photos/Suit.png);
+}
+
+.highHeels {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 0 0 10%;
+}
+.highHeels .steppingUp {
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+}
+.highHeels .steppingUp h1 {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+.highHeels .steppingUp .casualStyleStyle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+}
+.highHeels .steppingUp .casualStyleStyle h2 {
+  margin-bottom: 20px;
+  color: var(--Gray-Medium, #5f5f5f);
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 40px */
+}
+.highHeels .steppingUp p {
+  width: 65%;
+  color: var(--Gray-Medium, #5f5f5f);
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.highHeels .steppingUp .stepUpBtn {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+.highHeels .steppingUp .stepUpBtn button {
+  border-radius: 33px;
+  background: white;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+  padding: 8px 48px;
+  color: black;
+}
+.highHeels .saleImg .elipse1 {
+  position: absolute;
+  width: 406px;
+  height: 406px;
+  flex-shrink: 0;
+  border-radius: 396.15px;
+  background: linear-gradient(252deg, #ee5a3d 34.35%, rgba(246, 222, 137, 0.65) 76.18%);
+  background-blend-mode: multiply;
+  filter: blur(100px);
+}
+.highHeels .saleImg img {
+  position: relative;
+  z-index: 100;
+  width: 772px;
+  height: 579px;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+footer {
+  padding: 200px;
+  background-color: black;
+}
+footer .line {
+  width: 1420px;
+  height: 1px;
+  background-color: #5f5f5f;
+}
+footer .footerFooter {
+  padding-top: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+footer .footerFooter h1 {
+  color: #fff;
+  font-family: Ubuntu;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 10px 0;
+}
+footer .footerFooter li {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 10px 0;
+  display: flex;
+  align-items: flex-start;
+}/*# sourceMappingURL=Style.css.map */
