@@ -42,6 +42,36 @@
   letter-spacing: -0.4px;
 }
 
+.styleTitle {
+  color: #fff;
+  font-family: Ubuntu;
+  margin-bottom: 0;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.styleTitleFooter {
+  margin-bottom: 0;
+  color: #5f5f5f;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.styleParagraph {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 .prodTitleHeader {
   color: #fff;
   font-family: Ubuntu;
@@ -114,7 +144,7 @@
 .newIn {
   width: 441px;
   height: 585px;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   align-items: end;
 }
@@ -412,7 +442,7 @@ header .photoControlls .arrows {
   padding-right: 14%;
   padding-bottom: 50px;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
 }
 .collections .collectionCards {
@@ -461,30 +491,11 @@ header .photoControlls .arrows {
   display: flex;
   justify-content: space-around;
 }
-.casualStyle .casualStyleDesc .casualStyleTitle h1 {
-  color: #fff;
-  font-family: Ubuntu;
-  margin-bottom: 0;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 64px;
-}
 .casualStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 0;
-}
-.casualStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle h2 {
-  margin-bottom: 0;
-  color: #5f5f5f;
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%;
 }
 .casualStyle .styleDesc {
   width: 60%;
@@ -501,6 +512,12 @@ header .photoControlls .arrows {
 }
 .casualStyle .productCards .productCardTshirts .newIn {
   background-image: url(./Assets/Photos/Tshirts.jpeg);
+}
+.casualStyle .productCards .productCardTigerHeels {
+  display: none;
+}
+.casualStyle .productCards .productCardTigerHeels .newIn {
+  background-image: url(./Assets/Photos/TigerHeels.jpg);
 }
 
 @media screen and (max-width: 1250px) {
@@ -521,6 +538,14 @@ header .photoControlls .arrows {
     display: flex;
     justify-content: flex-start;
   }
+  .casualStyle .productCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .casualStyle .productCards .productCardTigerHeels {
+    display: block;
+  }
 }
 .autumnOffers {
   background-color: black;
@@ -536,17 +561,7 @@ header .photoControlls .arrows {
   border-radius: 406px;
   background: rgba(201, 41, 118, 0.38);
   filter: blur(74px);
-}
-.autumnOffers .elipse2 {
-  position: absolute;
-  width: 784.995px;
-  height: 447.249px;
-  transform: rotate(-1.101deg);
-  flex-shrink: 0;
-  border-radius: 784.995px;
-  background: linear-gradient(251deg, #a73b27 22.43%, rgba(98, 129, 41, 0.51) 59.21%, rgba(25, 202, 43, 0) 76.17%);
-  background-blend-mode: multiply;
-  filter: blur(100px);
+  overflow: hidden;
 }
 .autumnOffers .elipse3 {
   position: absolute;
@@ -556,6 +571,7 @@ header .photoControlls .arrows {
   border-radius: 406px;
   background: rgba(173, 124, 237, 0.5);
   filter: blur(74px);
+  overflow: hidden;
 }
 .autumnOffers .offerText {
   display: flex;
@@ -565,7 +581,6 @@ header .photoControlls .arrows {
 }
 .autumnOffers .offerText h1 {
   color: #fff;
-  text-align: center;
   font-family: Ubuntu;
   font-size: 170px;
   font-style: normal;
@@ -575,7 +590,6 @@ header .photoControlls .arrows {
 }
 .autumnOffers .offerText h2 {
   color: #fff;
-  text-align: center;
   font-family: Ubuntu;
   font-size: 36px;
   font-style: normal;
@@ -591,6 +605,12 @@ header .photoControlls .arrows {
   flex-shrink: 0;
 }
 
+@media screen and (max-width: 1250px) {
+  .autumnOffers {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .professionalStyle {
   background-color: black;
   padding-top: 200px;
@@ -601,31 +621,11 @@ header .photoControlls .arrows {
   display: flex;
   justify-content: space-around;
 }
-.professionalStyle .casualStyleDesc .casualStyleTitle h1 {
-  color: #fff;
-  text-align: center;
-  font-family: Ubuntu;
-  margin-bottom: 0;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 64px; /* 100% */
-}
 .professionalStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 0;
-}
-.professionalStyle .casualStyleDesc .casualStyleTitle .casualStyleStyle h2 {
-  margin-bottom: 0;
-  color: var(--Gray-Medium, #5f5f5f);
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 40px */
 }
 .professionalStyle .styleDesc {
   width: 51%;
@@ -643,96 +643,133 @@ header .photoControlls .arrows {
 .professionalStyle .productCards .productCardTshirts .newIn {
   background-image: url(./Assets/Photos/Suit.png);
 }
+.professionalStyle .productCards .productCardTigerHeels {
+  display: none;
+}
+.professionalStyle .productCards .productCardTigerHeels .newIn {
+  background-image: url(./Assets/Photos/Boots.jpeg);
+}
 
+@media screen and (max-width: 1250px) {
+  .professionalStyle {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .professionalStyle .casualStyleDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .professionalStyle .casualStyleDesc .styleDesc {
+    width: 90%;
+    padding-top: 3%;
+  }
+  .professionalStyle .casualButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .professionalStyle .productCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .professionalStyle .productCards .productCardTigerHeels {
+    display: block;
+  }
+}
 .highHeels {
   background-color: black;
+  padding: 20% 6%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
-  padding: 0 0 0 10%;
 }
-.highHeels .steppingUp {
-  z-index: 100;
+.highHeels .highHeelsImg {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.highHeels .steppingUp h1 {
-  color: #fff;
-  font-family: Ubuntu;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 64px;
+.highHeels .highHeelsImg img {
+  width: 120%;
+  z-index: 100;
 }
-.highHeels .steppingUp .casualStyleStyle {
+.highHeels .highHeelsImg .highHeelsElipse {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 396.15px;
+  background: linear-gradient(252deg, #ee5a3d 34.35%, rgba(246, 222, 137, 0.65) 76.18%);
+  background-blend-mode: multiply;
+  filter: blur(100px);
+  overflow: hidden;
+}
+.highHeels .casualStyleDesc {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 200;
+}
+.highHeels .casualStyleDesc .casualStyleTitle {
+  display: flex;
+  flex-direction: column;
+}
+.highHeels .casualStyleDesc .casualStyleTitle .casualStyleStyle {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 0;
 }
-.highHeels .steppingUp .casualStyleStyle h2 {
-  margin-bottom: 20px;
-  color: var(--Gray-Medium, #5f5f5f);
-  text-align: center;
-  font-family: Ubuntu;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 40px */
+.highHeels .styleDesc {
+  width: 75%;
+  flex-shrink: 0;
 }
-.highHeels .steppingUp p {
-  width: 65%;
-  color: var(--Gray-Medium, #5f5f5f);
-  font-family: Ubuntu;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-}
-.highHeels .steppingUp .stepUpBtn {
-  padding-top: 30px;
-  display: flex;
-  justify-content: flex-start;
-}
-.highHeels .steppingUp .stepUpBtn button {
-  border-radius: 33px;
-  background: white;
-  text-align: center;
+.highHeels .heelsButton button {
   font-family: Ubuntu;
   font-size: 10px;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 2.1px;
-  text-transform: uppercase;
-  padding: 8px 48px;
+  border-radius: 30px;
+  background: #fff;
+  width: 245px;
+  height: 48px;
+  flex-shrink: 0;
   color: black;
-}
-.highHeels .saleImg .elipse1 {
-  position: absolute;
-  width: 406px;
-  height: 406px;
-  flex-shrink: 0;
-  border-radius: 396.15px;
-  background: linear-gradient(252deg, #ee5a3d 34.35%, rgba(246, 222, 137, 0.65) 76.18%);
-  background-blend-mode: multiply;
-  filter: blur(100px);
-}
-.highHeels .saleImg img {
-  position: relative;
-  z-index: 100;
-  width: 772px;
-  height: 579px;
-  flex-shrink: 0;
-  z-index: 100;
+  text-align: center;
 }
 
+@media screen and (max-width: 1250px) {
+  .highHeels {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .highHeels .highHeelsImg {
+    grid-row: 1;
+  }
+  .highHeels .highHeelsImg .casualButton {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .highHeels .casualStyleDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .highHeels .casualStyleDesc .styleDesc {
+    width: 90%;
+    padding-top: 3%;
+  }
+}
 footer {
-  padding: 200px;
+  padding: 10%;
   background-color: black;
 }
 footer .line {
-  width: 1420px;
+  width: 100%;
   height: 1px;
   background-color: #5f5f5f;
 }
@@ -760,4 +797,11 @@ footer .footerFooter li {
   padding: 10px 0;
   display: flex;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 1250px) {
+  footer .footerFooter {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=Style.css.map */

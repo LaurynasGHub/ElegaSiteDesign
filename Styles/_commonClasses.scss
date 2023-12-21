@@ -12,6 +12,37 @@
 }
 
 //commonly used header styles
+.styleTitle {
+  color: #fff;
+  // text-align: center;
+  font-family: Ubuntu;
+  margin-bottom: 0;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.styleTitleFooter {
+  margin-bottom: 0;
+  color: #5f5f5f;
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.styleParagraph {
+  color: #5f5f5f;
+  font-family: Ubuntu;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
 //headers used in product cards
 .prodTitleHeader {
   color: #fff;
@@ -88,7 +119,9 @@
 .newIn {
   width: 441px;
   height: 585px;
-  background-size: contain;
+  background-size: cover;
+  // background-size: contain;
+  // background-repeat: no-repeat;
   display: flex;
   align-items: end;
 }
