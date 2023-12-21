@@ -163,3 +163,34 @@
     padding: 8px 48px;
   }
 }
+
+//misc classes, nerodo stiliaus nors ir uzdeta klase?
+.addToCartBtn {
+  padding: 50px 8% 50px 0;
+  display: none;
+  button {
+    color: #000;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+  }
+}
+
+.heartSelected {
+  background-color: white;
+  .svg {
+    border-radius: 100px;
+    background: #fff;
+  }
+}
+
+@media screen and(max-width: 1250px) {
+  .addToCartBtn {
+    display: block;
+  }
+}
